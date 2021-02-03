@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <unistd.h>
 
 /**
@@ -9,7 +8,7 @@
  */
 int main(void)
 {
-	char output[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(STDERR_FILENO, output, strlen(output);
+	write(STDERR_FILENO,
+	"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 63);
 	return (1);
 }
