@@ -15,9 +15,9 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0)
-		printf("%ld is positive\n", (long unsigned)n);
+		printf("%ld is positive\n", (unsigned long)n);
 	else if (n < 0)
-		printf("%lu is negative\n", (long signed)n);
+		printf("%lu is negative\n", (signed long)n);
 	else
 		printf("%d is zero\n", n);
 	return (0);
