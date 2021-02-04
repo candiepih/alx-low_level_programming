@@ -13,9 +13,9 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-		printf("%lu is positive\n", (unsigned long)n);
+		printf("%lld is positive\n", (signed long long)n);
 	else if (n < 0)
-		printf("%ld is negative\n", (signed long)n);
+		printf("%lld is negative\n", (signed long long)n);
 	else
 		printf("%d is zero\n", n);
 	return (0);
