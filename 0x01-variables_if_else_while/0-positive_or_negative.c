@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /** 
- * main - Entry point * Description: printing negatice or positive value
+ * main - Entry point * Description: printing negative or positive value
  * Return: Always 0 (Success)
  */
 int main(void)
