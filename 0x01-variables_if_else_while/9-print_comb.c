@@ -4,24 +4,21 @@
 /**
  * main - Entry point
  *
- * Description: printing base 10 numbers
+ * Description: printing base 10 combinations
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int num;
-	int num2;
-	char str;
+	int i;
 
-	for (num = 0; num < 10; num++)
-		if (num == 0)
-			str = '';
-			str = (int)str;
-		else
-			str = (char)num;
-			str = (int)str;
-		for (num2 = 0; num2 < 10; num2++)
-			printf("%d%d, ", str, num2);
+	for (i = 0; i < 100; i++)
+	{
+		if (i / 10 != 0)
+			putchar((i / 10) + '0');
+		putchar((i % 10) + '0');
+		putchar(',');
+		putchar(' ');
+	}
 	putchar('\n');
 	return (0);
 }
