@@ -14,10 +14,10 @@ int main(void)
 	{
 		putchar((i / 10) + '0');
 		putchar((i % 10) + '0');
-		putchar(',');
-		putchar(' ');
+		putchar(44);
+		putchar(32);
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
 
