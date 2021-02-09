@@ -1,13 +1,11 @@
 #include "holberton.h"
 
 /**
- * print_sign
- * @n: integer to be determined
+ * print_sign - print the sign of a number
+ * @n: value to be determined
  *
- * Description: print the sign of a number
- *
- * Return: return 1 if n is 
- * greater than zero, return 0 if n 
+ * Return: return 1 if n is
+ * greater than zero, return 0 if n
  * is zero and return -1 if n is
  * less than zero
  */
