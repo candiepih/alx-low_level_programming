@@ -16,13 +16,12 @@ int main(void)
 		if (i / 10 != 0)
 			putchar((i / 10) + '0');
 		putchar((i % 10) + '0');
-		if ((i != 99) && (i % 9 != 0 || i == 0))
+		if (i != 99)
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		if ((i % 9 == 0) && i > 0)
-			putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
