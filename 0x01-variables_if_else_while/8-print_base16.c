@@ -10,11 +10,12 @@
 int main(void)
 {
 	int num;
+	char ch;
 
 	for (num = 0; num < 10; num++)
-		putchar(num + 48);
-	for (num = 'a'; num <= 'f'; num++)
-		putchar(num);
+		putchar('0' + num % 10);
+		for (ch = 'a'; ch <= 'f'; ch++)
+			putchar(cb);
 	putchar('\n');
 	return (0);
 }
