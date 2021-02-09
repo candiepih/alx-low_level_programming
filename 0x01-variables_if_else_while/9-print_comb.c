@@ -16,8 +16,9 @@ int main(void)
 		if (i / 10 != 0)
 			putchar((i / 10) + '0');
 		putchar((i % 10) + '0');
-		putchar(',');
-		putchar(' ');
+		if (i != 99)
+			putchar(',');
+			putchar(' ');
 	}
 	putchar('\n');
 	return (0);
