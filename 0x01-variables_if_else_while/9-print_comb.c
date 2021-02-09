@@ -17,8 +17,8 @@ int main(void)
 		putchar((i % 10) + '0');
 		if (i != 99)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar('\n');
