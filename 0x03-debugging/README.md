@@ -1,4 +1,5 @@
 # C - Debugging
+This topic is about understanding various methods that can help in debugging my programs. Debugging simply is the process of identifying and removing errors from programs. This project contained task files to test the topic understanding
 ## holberton.h
 contains all function prototypes
 ## 0-main.c
