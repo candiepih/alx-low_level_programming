@@ -1,4 +1,5 @@
 # C - Functions, nested loops
+This topic covers functions and nested loops as used in C. I understood that functions are procedures or methods that perform a particular task. Loops are used to execute a set of statements repeatedly until a certain condition is met. Following task files were used to test topic understanding
 ## 0-holberton.c
 program that prints Holberton
 ## 1-alphabet.c
