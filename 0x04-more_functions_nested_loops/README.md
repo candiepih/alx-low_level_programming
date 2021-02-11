@@ -1,4 +1,5 @@
 # C - More functions, more nested loops
+This project was about learning about functions and how nested loops worked. To test topic understanding i added task files that cover various areas as explained
 ## 0-isupper.c
 Function that checks for uppercase letters
 ## 1-isdigit.c
