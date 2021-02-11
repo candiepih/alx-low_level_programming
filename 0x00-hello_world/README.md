@@ -1,5 +1,5 @@
 # 0x00. C - Hello, World
-#CISFUN
+# CISFUN :)
 Introduction to C programming. Following were task files used to test various introduction topics.
 ## 0-preprocessor
 script that runs a C file through the preprocessor and save the result into another file
