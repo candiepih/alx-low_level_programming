@@ -1,4 +1,5 @@
 # VARIABLES, IF, ELSE AND WHILE
+This topic covered the use of various types of variables, conditional statements and loops. Following task files were used to test topic understanding.
 ## 0-positive_or_negative.c
 print whether the number stored in the variable n is positive or negative.
 ## 1-last_digit.c
