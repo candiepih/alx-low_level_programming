@@ -18,12 +18,12 @@ int isNumericChar(char x)
 
 int _atoi(char *s)
 {
-	int result = 0, sign = 1, i;
+	int result = 0, sign = 1, i = 0;
 
 	if (*s == '\0')
 		return (0);
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (; s[i] != '\0'; i++)
 	{
 		if (!isNumericChar(s[i]))
 		{
