@@ -1,5 +1,5 @@
 # 0x05 pointers, arrays and strings
-The need of this topic was understanding of strings, arrays and pointers while tackling task files as presented below.
+The need of this topic was understanding of strings, arrays and pointers. To test the topic understanding, task files were presented as identified below.
 ## 0-reset_to_98.c
 Function that takes a pointer to an int as parameter and updates the value it points to to 98
 ## 1-swap.c
