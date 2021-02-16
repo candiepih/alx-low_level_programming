@@ -15,7 +15,7 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		if (i != lastIndex))
+		if (i != lastIndex)
 			printf("%d, ", a[i]);
 		else
 			printf("%d\n", a[i]);
