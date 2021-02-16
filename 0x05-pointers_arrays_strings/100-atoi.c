@@ -20,12 +20,12 @@ int isNumericChar(char x)
 
 int _atoi(char *s)
 {
-	int result = 0, sign = 1, i = 0;
+	int result = 0, sign = 1, i;
 
 	if (*s == '\0')
 		return (0);
 
-	for (; s[i] != '\0'; ++i)
+	for (i = 0; s[i] != '\0'; ++i)
 	{
 		if (isNumericChar(s[i]) == 0)
 		{
