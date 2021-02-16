@@ -35,7 +35,9 @@ int _atoi(char *s)
 			}
 			continue;
 		}
+
 		result = result * 10 + s[i] - '0';
+
 		if (s[i + 1] == ' ')
 			break;
 	}
