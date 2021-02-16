@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * isNumericChar - determines numeric character or not
  * @x: character to be tested
