@@ -7,8 +7,9 @@
  * 1 (True if is numeric)
  */
 
-int isNumericChar(char x) {
-   return (x >= '0' && x <= '9') ? 1 : 0;
+int isNumericChar(char x)
+{
+	return ((x >= '0' && x <= '9') ? 1 : 0);
 }
 
 /**
@@ -24,17 +25,22 @@ int _atoi(char *s)
 	if (*s == '\0')
 		return (0);
 
-	for (; s[i] != '\0'; ++i) {
-		if (isNumericChar(s[i]) == 0){
-			if (s[i] == '-') {
+	for (; s[i] != '\0'; ++i)
+	{
+		if (isNumericChar(s[i]) == 0)
+		{
+			if (s[i] == '-')
+			{
 				sign *= -1;
-			}else if(s[i] == '+'){
+			}
+			else if (s[i] == '+')
+			{
 				sign *= 1;
 			}
 			continue;
 		}
 		result = result * 10 + s[i] - '0';
-		if (s[i+1] == ' ')
+		if (s[i + 1] == ' ')
 			break;
 	}
 	return (sign * result);
