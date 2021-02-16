@@ -25,7 +25,7 @@ int _atoi(char *s)
 
 	for (; s[i] != '\0'; i++)
 	{
-		if (isNumericChar(s[i]) == 0)
+		if (!isNumericChar(s[i]))
 		{
 			if (s[i] == '-')
 				sign *= (-1);
