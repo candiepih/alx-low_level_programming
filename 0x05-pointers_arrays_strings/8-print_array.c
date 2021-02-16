@@ -2,8 +2,7 @@
 #include "holberton.h"
 
 /**
- * print_array - printing full array depending on
- * size provided
+ * print_array - printing full array depending on size
  * @a: array pointed to
  * @n: size limit of values to be printed
  * Return: nothing
