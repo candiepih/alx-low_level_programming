@@ -33,10 +33,6 @@ int _atoi(char *s)
 			{
 				sign *= -1;
 			}
-			else if (s[i] == '+')
-			{
-				sign *= 1;
-			}
 			continue;
 		}
 		result = result * 10 + s[i] - '0';
