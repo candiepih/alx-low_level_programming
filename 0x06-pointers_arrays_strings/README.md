@@ -14,11 +14,11 @@ Function that changes all lowercase letters of a string to uppercase.
 ## 6-cap_string.c
 Function that capitalizes all words of a string.
 ## 7-leet.c
-function that encodes a string into 1337.
-Letters a and A should be replaced by 4
-Letters e and E should be replaced by 3
-Letters o and O should be replaced by 0
-Letters t and T should be replaced by 7
-Letters l and L should be replaced by 1
+* function that encodes a string into 1337.
+* Letters a and A should be replaced by 4
+* Letters e and E should be replaced by 3
+* Letters o and O should be replaced by 0
+* Letters t and T should be replaced by 7
+* Letters l and L should be replaced by 1
 ## 8-rot13.c
 Function that encodes a string using rot13.
