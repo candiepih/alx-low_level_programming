@@ -1,4 +1,5 @@
 # More on pointers, arrays and strings
+This topic covers more on pointers, strings and arrays. The task files cover various topic sections that were covered for further grasping.
 ## 0-strcat.c
 Function that concatenates two strings.
 ## 1-strncat.c
@@ -14,7 +15,7 @@ Function that changes all lowercase letters of a string to uppercase.
 ## 6-cap_string.c
 Function that capitalizes all words of a string.
 ## 7-leet.c
-* function that encodes a string into 1337.
+Function that encodes a string into 1337.
 * Letters a and A should be replaced by 4
 * Letters e and E should be replaced by 3
 * Letters o and O should be replaced by 0
