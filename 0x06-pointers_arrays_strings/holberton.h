@@ -9,5 +9,9 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 int _isUpper(char st);
 int _isAlpha(char st);
+char *cap_string(char *);
+void _capitalize(char *st, int index);
+char *leet(char *);
+char *rot13(char *);
 
 #endif

@@ -1,6 +1,6 @@
 /**
  * _strncat - concatenates strings but printing most of @n
- * bytes from @src buto src does not need to be null terminated 
+ * bytes from @src buto src does not need to be null terminated
  * if it contains @n bytes or more
  *
  * @dest: destination string
@@ -10,14 +10,14 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-  int length = 0, i;
+	int length = 0, i;
 
-	  for (i = 0; dest[i] != '\0'; i++)
-		  length++;
+	for (i = 0; dest[i] != '\0'; i++)
+		length++;
 
-    for (i = 0 ; i < n && src[i] != '\0' ; i++)
-        dest[length + i] = src[i];
-    dest[length + i] = '\0';
+	for (i = 0 ; i < n && src[i] != '\0' ; i++)
+		dest[length + i] = src[i];
+	dest[length + i] = '\0';
 
-    return dest;
+	return (dest);
 }
