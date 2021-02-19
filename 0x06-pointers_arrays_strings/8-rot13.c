@@ -9,6 +9,7 @@
  * @category: category, ie. a-m or n-z considering upper and lowercase
  * @altCategory
  */
+
 void _cat(char *s, int index, char category, char altCategory)
 {
 	if(s[index] == category)
