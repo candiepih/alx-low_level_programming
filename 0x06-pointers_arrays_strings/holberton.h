@@ -13,5 +13,6 @@ char *cap_string(char *);
 void _capitalize(char *st, int index);
 char *leet(char *);
 char *rot13(char *);
+void _cat(char *s, int index, char category, char altCategory);
 
 #endif

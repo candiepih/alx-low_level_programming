@@ -7,12 +7,12 @@
  * @s: pointer to main string
  * @index: index of the character checking
  * @category: category, ie. a-m or n-z considering upper and lowercase
- * @altCategory
+ * @altCategory: 
  */
 
 void _cat(char *s, int index, char category, char altCategory)
 {
-	if(s[index] == category)
+	if (s[index] == category)
 		s[index] = altCategory;
 }
 
@@ -41,7 +41,7 @@ char *rot13(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for(j = 0; alphUpper[j] != '\0'; j++)
+		for (j = 0; alphaUpper1[j] != '\0'; j++)
 		{
 			_cat(s, i, alphaLower1[j], alphaLower2[j]);
 			_cat(s, i, alphaLower2[j], alphaLower1[j]);
