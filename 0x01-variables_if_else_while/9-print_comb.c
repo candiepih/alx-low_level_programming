@@ -10,15 +10,17 @@ int main(void)
 {
 	int i;
 
-	for (i = 48; i <= 57; i++)
+	for (i = 0; i < 100; i++)
 	{
-		putchar(i);
-		if (i < 57)
+		if (i / 10 != 0)
+			putchar((i / 10) + '0');
+		putchar((i % 10) + '0');
+		if (i != 99)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
 	}
-	putchar('\n')
+	putchar(10);
 	return (0);
 }
