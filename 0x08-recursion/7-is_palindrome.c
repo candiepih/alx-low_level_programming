@@ -26,10 +26,10 @@ int _is_palindrome_helper(char *str, int start, int end)
 {
 	if (str[start] != str[end])
 		return (0);
-	if (start == end)
+	else if (start == (end + 1))
 		return (1);
-	if (start < end)
-		_is_palindrome_helper(str, start + 1, end - 1);
+	else if (start <= end)
+		return (_is_palindrome_helper(str, start + 1, end - 1));
 	return (1);
 }
 
