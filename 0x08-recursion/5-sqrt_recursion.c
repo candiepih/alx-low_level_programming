@@ -13,7 +13,7 @@ int sqrtSearch(int low, int high, int num)
 	if (low <= high)
 	{
 
-		if ((mid * mid <= num) && ((mid + 1) * (mid + 1) > num))
+		if (((mid * mid) <= num) && ((mid + 1) * (mid + 1) > num))
 		{
 			return (mid);
 		}
