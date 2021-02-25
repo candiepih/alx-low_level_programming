@@ -1,33 +1,20 @@
 /**
- * sqrtSearch - finds the approximate square of a number using
- * binary search
- * @low: the lowest number but greater thatn 0
- * @high: highest number but less than @num(number finding square root)
- * @num: number provided to get square root
+ * sqrtSearch - finds the approximate square of a number
+ * @n: number provided to get square root
+ * @i: lowest point
  * Return: approximate square number for the square root of @num
  */
-int sqrtSearch(int low, int high, int num)
+int sqrtSearch(int n, int i)
 {
-	int mid = ((low + high) / 2);
-
-	if (low <= high)
+	if (i * i > n)
 	{
-
-		if (((mid * mid) <= num) && ((mid + 1) * (mid + 1) > num))
-		{
-			return (mid);
-		}
-		else if ((mid * mid) < num)
-		{
-			return (sqrtSearch((mid + 1), high, num));
-		}
-		else
-		{
-			return (sqrtSearch(low, (mid - 1), num));
-		}
+		return -1;
 	}
-
-	return (low);
+	if(i * i == n)
+	{
+		return i;
+	}
+	return sqrtSearch(n, i + 1);
 }
 
 /**
@@ -39,11 +26,15 @@ int sqrtSearch(int low, int high, int num)
 
 int _sqrt_recursion(int n)
 {
-	int root = sqrtSearch(0, n, n);
+	int start = 2;
 
-	if ((root * root) != n)
+	if(n < 0)
 	{
-		return (-1);
+		return -1;
 	}
-	return (root);
+	else if(n == 0 || n == 1)
+	{
+		return n;
+	}
+	return sqrtSearch(n, start);
 }
