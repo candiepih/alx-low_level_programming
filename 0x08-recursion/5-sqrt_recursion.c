@@ -6,35 +6,34 @@
  * @num: number provided to get square root
  * Return: approximate square number for the square root of @num
  */
-int sqrtSearch(int low, int high, int num) 
+int sqrtSearch(int low, int high, int num)
 {
 	int mid;
 
 	if (low <= high)
-	{ 
-		mid = (low + high) / 2; 
-
+	{
+		mid = (low + high) / 2;
 
 		if ((mid * mid <= num) && ((mid + 1) * (mid + 1) > num))
-		{ 
-			return (mid); 
-		} 
+		{
+			return (mid);
+		}
 		else if (mid * mid < num)
-		{ 
-			return (sqrtSearch(mid + 1, high, num)); 
-		} 
+		{
+			return (sqrtSearch(mid + 1, high, num));
+		}
 		else
-		{ 
-			return (sqrtSearch(low, mid - 1, num)); 
+		{
+			return (sqrtSearch(low, mid - 1, num));
 		}
 	}
 
-	return (low); 
-} 
+	return (low);
+}
 
 /**
  * _sqrt_recursion - finds the square root of a number
- * @s: the number to find the square root
+ * @n: the number to find the square root
  * Return: (-1) if the number @s does not have a natural square root
  * else return the square root
  */
