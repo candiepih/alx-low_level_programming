@@ -8,11 +8,10 @@
  */
 int sqrtSearch(int low, int high, int num)
 {
-	int mid;
+	int mid = ((low + high) / 2);
 
 	if (low <= high)
 	{
-		mid = ((low + high) / 2);
 
 		if ((mid * mid <= num) && ((mid + 1) * (mid + 1) > num))
 		{
@@ -40,9 +39,8 @@ int sqrtSearch(int low, int high, int num)
 
 int _sqrt_recursion(int n)
 {
-	int root;
+	int root = sqrtSearch(0, n, n);
 
-	root = sqrtSearch(0, n, n);
 	if ((root * root) != n)
 	{
 		return (-1);
