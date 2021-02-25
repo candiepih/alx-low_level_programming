@@ -1,4 +1,5 @@
 # More on pointers arrays and strings
+Aim of this topic was to understand more on pointers, arrays and strings. To understand more i did the following tasks as below.
 ## 0-memset.c
 Function that fills memory with a constant byte.
 ## 1-memcpy.c
@@ -19,3 +20,5 @@ Function that prints the sum of the two diagonals of a square matrix of integers
 Function that sets the value of a pointer to a char.
 ## 101-crackme_password
 File that contains the password for the crackme2(https://github.com/holbertonschool/0x06.c) executable.
+## holberton.h
+Contains all the function prototypes and declarations.
