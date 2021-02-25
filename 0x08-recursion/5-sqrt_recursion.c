@@ -10,10 +10,11 @@ int sqrtSearch(int n, int i)
 	{
 		return (-1);
 	}
-	if((i * i) == n)
+	if ((i * i) == n)
 	{
 		return (i);
 	}
+
 	return (sqrtSearch(n, i + 1));
 }
 
@@ -28,11 +29,11 @@ int _sqrt_recursion(int n)
 {
 	int start = 2;
 
-	if(n < 0)
+	if (n < 0)
 	{
 		return (-1);
 	}
-	else if(n == 0 || n == 1)
+	else if (n == 0 || n == 1)
 	{
 		return (n);
 	}
