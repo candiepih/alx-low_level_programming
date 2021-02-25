@@ -1,4 +1,5 @@
 # Recursion
+This topic was necessary to understand recursion. It might seem like iteration but the concept of recursion is different from iteration. Iteration occurs when a loop repeatedly executes untill a certain condition is false, but recursion occurs when a function calls it self within. Below tasks helped me grasp more on recursion
 ## 0-puts_recursion.c
 Function that prints a string
 ## 1-print_rev_recursion.c
