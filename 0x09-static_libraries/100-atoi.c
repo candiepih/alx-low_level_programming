@@ -1,16 +1,4 @@
 /**
- * isNumericChar - determines numeric character or not
- * @x: character to be tested
- * Return: 0 (False if not numeric)
- * 1 (True if is numeric)
- */
-
-int isNumericChar(char x)
-{
-	return ((x >= '0' && x <= '9') ? 1 : 0);
-}
-
-/**
  * _atoi - converts string to integer
  * @s: string to convert to integer
  * Return: converted integer string
@@ -25,7 +13,7 @@ int _atoi(char *s)
 
 	for (; s[i] != '\0'; i++)
 	{
-		if (!isNumericChar(s[i]))
+		if (!(s[i] >= '0' && s[i] <= '9'))
 		{
 			if (s[i] == '-')
 				sign *= (-1);
