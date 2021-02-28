@@ -13,16 +13,17 @@
 
 int main(int argc, char *argv[])
 {
-	int sum, num, i = 1;
+	int sum, num, i;
 
 	if (argc > 1)
 	{
+		i = 1;
+
 		while (i < argc)
 		{
 			if (_isDigitOnly(argv[i]) == 0)
 			{
-				num = atoi(argv[i]);
-				sum += num
+				sum += atoi(argv[i]);
 				i++;
 			}
 			else
