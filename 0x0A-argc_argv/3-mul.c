@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int product;
+
 	if ((argc - 1) == 2)
 	{
 		product = atoi(argv[1]) * atoi(argv[2]);
