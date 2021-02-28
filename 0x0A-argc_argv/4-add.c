@@ -19,11 +19,10 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
-			num = atoi(argv[i]);
-
 			if (_isDigitOnly(argv[i]) == 0)
 			{
-				sum += num;
+				num = atoi(argv[i]);
+				sum += num
 				i++;
 			}
 			else
