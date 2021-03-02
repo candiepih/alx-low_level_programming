@@ -17,7 +17,7 @@ int _str_length(char *s)
 }
 
 /**
- * str_concat - concatenates two strings
+ * _str_concat - concatenates two strings
  * @s1: first string
  * @s2: second string
  * Return: nothing
@@ -47,7 +47,7 @@ char *argstostr(int ac, char **av)
 	char *newString;
 	int i, length;
 
-	if (ac == 0 )
+	if (ac == 0)
 		return (0);
 
 	for (i = 0; i < ac; i++)

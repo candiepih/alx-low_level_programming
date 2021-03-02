@@ -3,8 +3,8 @@
 /**
  * alloc_grid - creates a two dimension array and initializes
  * them with a zero
- * @width: size of the array
- * @length: size of the arrays inside the main array created
+ * @width: size of the arrays in the main array
+ * @height: size of the main array
  * Return: pointer to the main array created
  */
 
@@ -15,7 +15,7 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (0);
 
-	arr = malloc(height *sizeof(int *));
+i	arr = malloc(height * sizeof(int *));
 
 	if (arr == 0)
 		return (0);
@@ -29,7 +29,7 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		for(j = 0; j < width; j++)
+		for (j = 0; j < width; j++)
 			arr[i][j] = 0;
 	}
 
