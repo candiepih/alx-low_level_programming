@@ -54,6 +54,9 @@ char *argstostr(int ac, char **av)
 		length += _str_length(av[i]);
 
 	newString = malloc((length + (ac - 1) + 1) * sizeof(char));
+	
+	if (newString == 0)
+		return (0);
 
 	for (i = 0; i < ac; i++)
 		_str_concat(newString, av[i]);
