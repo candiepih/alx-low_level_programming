@@ -31,12 +31,12 @@ char *_strdup(char *str)
 	if (str == 0)
 		return (0);
 
-	newStr = malloc(((length) + 1) * sizeof(char));
+	newStr = malloc((length + 1) * sizeof(char));
 
 	if (newStr == 0)
 		return (0);
 
-	for (i = 0; i < _str_length(str); i++)
+	for (i = 0; i < length; i++)
 		newStr[i] = str[i];
 
 	return (newStr);
