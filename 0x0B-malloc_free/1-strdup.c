@@ -28,9 +28,12 @@ char *_strdup(char *str)
 	int j = 0;
 	int stringLength = _str_length(str);
 
+	if (str == 0)
+		return (0);
+
 	newStr = malloc(sizeof(char) * stringLength);
 
-	if (str == 0 || newStr == 0)
+	if (newStr == 0)
 		return (0);
 
 	while (stringLength--)
