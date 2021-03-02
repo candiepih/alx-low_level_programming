@@ -31,13 +31,14 @@ char *_strdup(char *str)
 	if (str == 0)
 		return (0);
 
-	newStr = malloc((sizeof(char)) * stringLength);
+	newStr = malloc(sizeof(char) * stringLength);
 
 	if (newStr == 0)
 		return (0);
 
 	for (i = 0; i < stringLength; i++)
 		newStr[i] = str[i];
+	newStr[i] = '\0';
 
 	return (newStr);
 }
