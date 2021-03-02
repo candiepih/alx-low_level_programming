@@ -26,7 +26,7 @@ char *_strdup(char *str)
 {
 	char *newStr;
 	int j = 0;
-	int stringLength = _str_length(str);
+	int stringLength = (_str_length(str) - 1);
 
 	if (str == 0)
 		return (0);
