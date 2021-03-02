@@ -27,6 +27,7 @@ int _str_length(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
+	char *newString;
 	int length1 = _str_length(s1);
 	int length2 = _str_length(s2);
 	int length;
