@@ -17,7 +17,7 @@ int _str_length(char *s)
 		i++;
 	}
 
-	return (i);
+	return (count);
 }
 
 /**
