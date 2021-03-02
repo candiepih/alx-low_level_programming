@@ -61,7 +61,5 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 		_str_concat(newString, av[i]);
 
-	newString[(length + (ac - 1) + 1)] = '\0';
-
 	return (newString);
 }
