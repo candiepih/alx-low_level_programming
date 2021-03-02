@@ -25,14 +25,14 @@ int _str_length(char *s)
 char *_strdup(char *str)
 {
 	char *newStr;
-	int i = 0, ln;
+	int i = 0, l;
 
 	ln = _str_length(str);
 
 	if (str == 0)
 		return (0);
 
-	newStr = (char *)malloc(ln * sizeof(char));
+	newStr = (char *)malloc((ln) * sizeof(char));
 
 	if (newStr == 0)
 		return (0);
