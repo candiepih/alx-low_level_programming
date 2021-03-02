@@ -25,22 +25,19 @@ int _str_length(char *s)
 char *_strdup(char *str)
 {
 	char *newStr;
-	int j = 0;
+	int i = 0;
 	int stringLength = _str_length(str);
 
-	if (str == NULL)
-		return (NULL);
+	if (str == 0)
+		return (0);
 
 	newStr = malloc(sizeof(char) * stringLength);
 
 	if (newStr == 0)
 		return (0);
 
-	while (stringLength--)
-	{
-		newStr[j] = str[j];
-		j++;
-	}
+	for (i = 0; i < stringLength; i++)
+		newStr[i] = str[i];
 
 	return (newStr);
 }
