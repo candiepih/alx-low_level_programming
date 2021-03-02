@@ -28,8 +28,8 @@ char *_strdup(char *str)
 	int j = 0;
 	int stringLength = _str_length(str);
 
-	if (str == 0)
-		return (0);
+	if (str == NULL)
+		return (NULL);
 
 	newStr = malloc(sizeof(char) * stringLength);
 
