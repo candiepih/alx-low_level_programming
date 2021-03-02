@@ -11,9 +11,7 @@ int _str_length(char *s)
 	int i = 0;
 
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 
 	return (i);
 }
@@ -28,17 +26,16 @@ char *_strdup(char *str)
 {
 	char *newStr;
 	int i = 0;
-	int stringLength = _str_length(str);
 
 	if (str == 0)
 		return (0);
 
-	newStr = (char *)malloc(stringLength * sizeof(char));
+	newStr = (char *)malloc((_str_length(str)) * sizeof(char));
 
 	if (newStr == 0)
 		return (0);
 
-	for (i = 0; i < stringLength; i++)
+	for (i = 0; i < _str_length(str); i++)
 		newStr[i] = str[i];
 
 	return (newStr);
