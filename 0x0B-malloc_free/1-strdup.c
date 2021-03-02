@@ -35,12 +35,13 @@ char *_strdup(char *str)
 	if (newStr == 0)
 		return (0);
 
+	stringLength -= 1;
+
 	while (stringLength--)
 	{
 		newStr[j] = str[j];
 		j++;
 	}
-	newStr[j] = '\0';
 
 	return (newStr);
 }
