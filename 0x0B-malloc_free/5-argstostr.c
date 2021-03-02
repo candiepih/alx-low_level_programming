@@ -60,7 +60,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 		_str_concat(newString, av[i]);
 		newLength = _str_length(newString);
-		av[newLength] = '\n';
+		newString[newLength] = '\n';
 
 	newString[(length + ac)] = '\0';
 
