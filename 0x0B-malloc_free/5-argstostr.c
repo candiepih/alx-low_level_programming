@@ -47,7 +47,7 @@ char *argstostr(int ac, char **av)
 	char *newString;
 	int i, length;
 
-	if (ac == 0 || av == 0)
+	if (ac == 0)
 		return (0);
 
 	for (i = 0; i < ac; i++)
