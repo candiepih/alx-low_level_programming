@@ -9,9 +9,13 @@
 int _str_length(char *s)
 {
 	int i = 0;
+	int count;
 
 	while (s[i] != '\0')
+	{
+		count++;
 		i++;
+	}
 
 	return (i);
 }
