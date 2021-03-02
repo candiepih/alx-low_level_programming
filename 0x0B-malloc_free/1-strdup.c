@@ -30,10 +30,7 @@ char *_strdup(char *str)
 
 	newStr = malloc(sizeof(char) * stringLength);
 
-	if (str == 0)
-		return (0);
-
-	if (newStr == 0)
+	if (str == 0 || newStr == 0)
 		return (0);
 
 	while (stringLength--)
