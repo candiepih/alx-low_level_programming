@@ -58,9 +58,11 @@ char *argstostr(int ac, char **av)
 		return (0);
 
 	for (i = 0; i < ac; i++)
+	{
 		_str_concat(newString, av[i]);
 		newLength = _str_length(newString);
 		newString[newLength] = '\n';
+	}
 
 	newString[(length + ac)] = '\0';
 
