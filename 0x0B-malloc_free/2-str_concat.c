@@ -28,19 +28,17 @@ int _str_length(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *newString;
-	int length1 = _str_length(s1);
-	int length2 = _str_length(s2);
 	int length;
 	int i, j;
 
-	length = (length1 + length2);
+	length = (_str_length(s1) + _str_length(s2));
 
 	newString = malloc((length + 1) * sizeof(char));
 
 	if (newString == 0)
 		return (0);
 
-	for (i = 0; i < length1; i++)
+	for (i = 0; i < _str_length(s1); i++)
 		newString[i] = s1[i];
 
 	for (j = 0; i < length; i++, j++)
