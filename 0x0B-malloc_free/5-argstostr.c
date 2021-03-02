@@ -53,7 +53,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 		length += _str_length(av[i]);
 
-	newString = malloc((length + (ac - 1)) * sizeof(char));
+	newString = malloc((length + ac) * sizeof(char));
 
 	if (newString == 0)
 		return (0);
@@ -61,7 +61,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 		_str_concat(newString, av[i]);
 
-	newString[(length + (ac - 1))] = '\0';
+	newString[(length + ac)] = '\0';
 
 	return (newString);
 }
