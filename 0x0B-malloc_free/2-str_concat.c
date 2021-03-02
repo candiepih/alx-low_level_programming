@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include "holberton.h"
 
 /**
  * _str_length - gets the length of the given string
