@@ -24,12 +24,14 @@ int _str_length(char *s)
 char *_strdup(char *str)
 {
 	char *newStr;
-	int i = 0;
+	int i = 0, length;
+
+	length = _str_length(str);
 
 	if (str == 0)
 		return (0);
 
-	newStr = malloc((_str_length(str) + 1) * sizeof(char));
+	newStr = malloc((length + 1) * sizeof(char));
 
 	if (newStr == 0)
 		return (0);
