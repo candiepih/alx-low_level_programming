@@ -26,9 +26,8 @@ char *_strdup(char *str)
 {
 	char *newStr;
 	int j = 0;
-	int stringLength;
+	int stringLength = _str_length(str);
 
-	stringLength = _str_length(str);
 	if (str == 0)
 		return (0);
 
@@ -41,6 +40,7 @@ char *_strdup(char *str)
 		newStr[j] = str[j];
 		j++;
 	}
+	newStr[j] = '\0';
 
 	return (newStr);
 }
