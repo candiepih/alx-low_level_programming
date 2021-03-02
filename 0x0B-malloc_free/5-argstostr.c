@@ -32,7 +32,6 @@ void _str_concat(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; i++, j++)
 		s1[i] = s2[j];
 
-	s1[i] = '\n';
 }
 
 /**
@@ -45,7 +44,7 @@ void _str_concat(char *s1, char *s2)
 char *argstostr(int ac, char **av)
 {
 	char *newString;
-	int i, length;
+	int i, length, newLength;
 
 	if (ac == 0)
 		return (0);
@@ -60,6 +59,8 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 		_str_concat(newString, av[i]);
+		newLength = _str_length(newString);
+		s1[newLength] = '\n';
 
 	newString[(length + ac)] = '\0';
 
