@@ -17,6 +17,24 @@ int _str_length(char *s)
 }
 
 /**
+ * _str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: nothing
+ */
+
+void _str_concat(char *s1, char *s2)
+{
+	int i, j;
+
+	i = _str_length(s1);
+
+	for (j = 0; s2[j] != '\0'; i++, j++)
+		s1[i] = s2[j];
+
+}
+
+/**
  * str_concat - concatenates two strings
  * @s1: first string
  * @s2: second string
@@ -27,24 +45,18 @@ int _str_length(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *newString;
-	int length1 = _str_length(s1);
-	int length2 = _str_length(s2);
 	int length;
 	int i, j;
 
-	length = (length1 + length2);
+	length = (_str_length(s1) + _str_length(s2));
 
 	newString = malloc((length + 1) * sizeof(char));
 
 	if (newString == 0)
 		return (0);
 
-	for (i = 0; i < length1; i++)
-		newString[i] = s1[i];
-
-	for (j = 0; i < length; i++, j++)
-		newString[i] = s2[j];
-
+	_str_concat(newString, s1);
+	_str_concat(newString, s2);
 	newString[length + 1] = '\0';
 
 	return (newString);
