@@ -25,14 +25,13 @@ int _str_length(char *s)
 char *_strdup(char *str)
 {
 	char *newStr;
-	int i = 0, length;
-
-	length = _str_length(str);
+	int i = 0;
+	unsigned int  length = _str_length(str);
 
 	if (str == 0)
 		return (0);
 
-	newStr = (char *)malloc((length) * sizeof(char));
+	newStr = malloc(length * sizeof(char));
 
 	if (newStr == 0)
 		return (0);
