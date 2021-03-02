@@ -25,17 +25,19 @@ int _str_length(char *s)
 char *_strdup(char *str)
 {
 	char *newStr;
-	int i = 0;
+	int i = 0, ln;
+
+	ln = _str_length(str);
 
 	if (str == 0)
 		return (0);
 
-	newStr = (char *)malloc((_str_length(str)) * sizeof(char));
+	newStr = (char *)malloc(ln * sizeof(char));
 
 	if (newStr == 0)
 		return (0);
 
-	for (i = 0; i < _str_length(str); i++)
+	for (i = 0; i < ln; i++)
 		newStr[i] = str[i];
 
 	return (newStr);
