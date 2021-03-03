@@ -62,7 +62,7 @@ char **strtow(char *str)
 				arr[j] = extractWord(str, i);
 				j++;
 			}
-			else if(str[i - 1] != ' ' && i == 0)
+			else if (str[i - 1] != ' ' && i == 0)
 			{
 				arr[j] = extractWord(str, i);
 				j++;
