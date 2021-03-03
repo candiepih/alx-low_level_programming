@@ -41,7 +41,7 @@ char **strtow(char *str)
 	int i, j = 0;
 	int totalWords = 0;
 
-	if (str == 0 || str == "")
+	if (str == 0 || str == '\0')
 		return (0);
 
 	for (i = 0; str[i] != '\0'; i++)
