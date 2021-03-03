@@ -17,7 +17,7 @@ char *extractWord(char *s, int start)
 	while (s[i] != ' ' && s[i] != '\0')
 		i++;
 
-	newString = malloc(sizeof(char) * i);
+	newString = malloc(sizeof(char) * (i + 1));
 
 	while (s[start] != ' ' && s[start] != '\0')
 	{
