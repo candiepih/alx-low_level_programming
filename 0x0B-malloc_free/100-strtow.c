@@ -51,13 +51,18 @@ char **strtow(char *str)
 		}
 	}
 
-	arr = malloc(sizeof(char *) * (totalWords + 1));
+	arr = malloc(sizeof(char *) * (totalWords + 2));
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ')
 		{
 			if (str[i - 1] == ' ')
+			{
+				arr[j] = extractWord(str, i);
+				j++;
+			}
+			else if(str[i - 1] != ' ' && i == 0)
 			{
 				arr[j] = extractWord(str, i);
 				j++;
