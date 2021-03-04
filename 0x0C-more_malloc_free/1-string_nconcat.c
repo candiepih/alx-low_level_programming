@@ -60,7 +60,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		lens2 = (int)n;
 
 	length = l + lens2;
-	mainStr = malloc(sizeof(*mainStr) * length);
+	mainStr = malloc(sizeof(*mainStr) * (length + 1));
 	newS2 = malloc(sizeof(*newS2) * lens2);
 
 	if (!mainStr || !newS2)
