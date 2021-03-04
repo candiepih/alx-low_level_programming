@@ -56,15 +56,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	l = _str_length(s1);
 
 	if ((int)n >= _str_length(s2))
-	{
 		lens2 = _str_length(s2);
-		length = l + lens2;
-	}
 	else
-	{
-		lens2 = (int)n;
-		length = l + lens2;
-	}
+		lens2 = n;
+
 	mainStr = malloc(sizeof(*mainStr) * length);
 	newS2 = malloc(sizeof(*newS2) * lens2);
 
