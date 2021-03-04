@@ -56,12 +56,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	l = _str_length(s1);
 	lens2 = _str_length(s2);
 
-	if (((int)n) < lens2)
+	if ((int)n < lens2)
 		lens2 = (int)n;
 
 	length = l + lens2;
 	mainStr = malloc(sizeof(*mainStr) * (length + 1));
-	newS2 = malloc(sizeof(*newS2) * (lens2 - 1));
+	newS2 = malloc(sizeof(*newS2) * lens2);
 
 	if (!mainStr || !newS2)
 		return (0);
