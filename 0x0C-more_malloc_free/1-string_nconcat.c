@@ -56,8 +56,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	if ((int)n > len2)
-		(int)n = len2;
+	if (n > (unsigned int)len2)
+		n = (unsigned int)len2;
 
 	fullLength = len1 + len2 + 1;
 
