@@ -6,6 +6,12 @@ int isNumericChar(char x)
 	return ((x >= '0' && x <= '9') ? 1 : 0);
 }
 
+/**
+ * _atoi - converts string to integer
+ * @s: string to convert
+ * Return: resulting integer after converting
+ */
+
 int _atoi(char *s)
 {
 	int result = 0, sign = 1, i = 0;
@@ -31,6 +37,12 @@ int _atoi(char *s)
 	return (sign * result);
 }
 
+/**
+ * _str_length - gets the length of the string provided
+ * @s: string to get it's length
+ * Return: number of characters in a string
+ */
+
 int _str_length(char *s)
 {
 	int i = 0;
@@ -41,6 +53,12 @@ int _str_length(char *s)
 	return (i);
 }
 
+/**
+ * isNumber - checks whether a string contains only numeric or not
+ * @s: string to check
+ * Return: 0 (if string does not contain only numeric) otherwise 1
+ * if contains only numerics
+ */
 
 int isNumber(char *s)
 {
