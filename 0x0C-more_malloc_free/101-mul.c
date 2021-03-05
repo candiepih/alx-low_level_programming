@@ -96,10 +96,13 @@ char *tostring(int num)
 }
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * main - Entry point. multiplies two numbers
+ * @argc: arguments count
+ * @argv: array of strings as arguments
+ * Return: Always 0. Exits with status 98 if arguments are less
+ * than 2 or arguments are not numbers
  */
+
 int main(int argc, char *argv[])
 {
 	int mul;
@@ -122,4 +125,5 @@ int main(int argc, char *argv[])
 	print("\n");
 
 	free(p);
+	return (0);
 }
