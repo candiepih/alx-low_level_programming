@@ -59,6 +59,12 @@ int isNumber(char *s)
 	return (flag);
 }
 
+/**
+ * print - prints strings
+ * @s: string to print
+ * Return: nothing
+ */
+
 void print(char *s)
 {
 	int i;
@@ -69,8 +75,11 @@ void print(char *s)
 }
 
 /**
- *
+ * tostring - converts numbers to strings
+ * @num: number to convert
+ * Return: pointer to the resulting string
  */
+
 char *tostring(int num)
 {
 	int i, rem, len = 0, n;
