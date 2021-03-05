@@ -1,9 +1,14 @@
 #include "holberton.h"
 #include <stdlib.h>
 
-int isNumericChar(char x)
+/**
+ * isNumeric - determines if a character is numeric
+ * @c: character to determine
+ * Return: (1) if numeric (0) if not
+ */
+int isNumericChar(char c)
 {
-	return ((x >= '0' && x <= '9') ? 1 : 0);
+	return ((c >= '0' && c <= '9') ? 1 : 0);
 }
 
 /**
