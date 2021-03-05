@@ -44,40 +44,29 @@ void _str_concat(char *s1, char *s2)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *mainStr;
-	int lens2, length, l, i;
-	char *newS2;
+	char *newString;
+	int i, j = 0, fullLength, len1, len2;
 
-	if (s1 == 0)
+	len1 = _str_length(s1);
+	len2 = _str_length(s2);
+
+	if (s1 == NULL)
 		s1 = "";
-	if (s2 == 0)
+
+	if (s2 == NULL)
 		s2 = "";
 
-	l = _str_length(s1);
-	lens2 = _str_length(s2);
+	if ((int)n > len2)
+		(int)n = len2;
 
-	if ((int)n < lens2)
-		lens2 = (int)n;
+	fullLength = len1 + len2 + 1;
 
-	length = l + lens2;
-	mainStr = malloc(sizeof(*mainStr) * (length + 1));
-	newS2 = malloc(sizeof(*newS2) * lens2);
+	newString = malloc(sizeof(*newString) * fullLength);
+	for (i = 0; i < len1; i++)
+		newString[i] = s1[i];
+  
+	for (j = 0; j < n; i++, j++)
+		newString[i] = s2[j];
 
-	if (!mainStr || !newS2)
-		return (0);
-
-	while (i < lens2)
-	{
-		newS2[i] = s2[i];
-		i++;
-	}
-	newS2[i] = '\0';
-
-	_str_concat(mainStr, s1);
-	_str_concat(mainStr, newS2);
-
-	mainStr[(length + 1)] = '\0';
-	free(newS2);
-
-	return (mainStr);
+	return (newString);
 }
