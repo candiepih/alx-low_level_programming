@@ -50,8 +50,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL)
 		s1 = "";
 
-	if (s1 == NULL)
-		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	len1 = _str_length(s1);
 	len2 = _str_length(s2);
