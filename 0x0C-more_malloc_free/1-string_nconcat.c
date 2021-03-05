@@ -66,8 +66,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!mainStr || !newS2)
 		return (0);
 
-	mainStr[length+1] = '\0';
-
 	while (i < lens2)
 	{
 		newS2[i] = s2[i];
@@ -76,6 +74,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	_str_concat(mainStr, s1);
 	_str_concat(mainStr, newS2);
+
+	mainStr[(length + 1)] = '\0';
 
 	return (mainStr);
 }
