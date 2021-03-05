@@ -17,24 +17,6 @@ int _str_length(char *s)
 }
 
 /**
- * _str_concat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * Return: nothing
- */
-
-void _str_concat(char *s1, char *s2)
-{
-	int i, j;
-
-	i = _str_length(s1);
-
-	for (j = 0; s2[j] != '\0'; i++, j++)
-		s1[i] = s2[j];
-
-}
-
-/**
  * string_nconcat - concatenates sstrings depending on n bytes
  * @s1: sstring one
  * @s2: string two
