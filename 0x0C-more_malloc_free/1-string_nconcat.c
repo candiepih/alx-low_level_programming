@@ -59,12 +59,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!newString)
 		return (0);
 
-	if (s1 == NULL)
+	if (s1 != NULL)
 	{
 		for (i = 0; i < len1; i++)
 			newString[i] = s1[i];
 	}
-	if (s2 == NULL)
+	if (s2 != NULL)
 	{
 		for (j = 0; j < (int)n; i++, j++)
 			newString[i] = s2[j];
