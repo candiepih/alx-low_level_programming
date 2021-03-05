@@ -8,7 +8,7 @@
 
 char *tostring(int num)
 {
-  int i, rem, len = 0, n;
+	int i, rem, len = 0, n;
 	char *str;
 
 	n = num;
