@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * isNumeric - determines if a character is numeric
+ * isNumericChar - checks if character is numeric
  * @c: character to determine
  * Return: (1) if numeric (0) if not
  */
@@ -92,9 +92,8 @@ void print(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++){
+	for (i = 0; s[i] != '\0'; i++)
 		_putchar(s[i]);
-	}
 }
 
 /**
@@ -127,7 +126,7 @@ char *tostring(int num)
 	}
 	str[len] = '\0';
 
-	return str;
+	return (str);
 }
 
 /**
@@ -143,12 +142,14 @@ int main(int argc, char *argv[])
 	int mul;
 	char *p;
 
-	if ((argc - 1) != 2){
+	if ((argc - 1) != 2)
+	{
 		print("Error\n");
 		exit(98);
 	}
 
-	if (isNumber(argv[1]) == 0 || isNumber(argv[2]) == 0){
+	if ((isNumber(argv[1]) == 0) || (isNumber(argv[2]) == 0))
+	{
 		print("nm Error\n");
 		exit(98);
 	}
