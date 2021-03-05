@@ -76,6 +76,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	_str_concat(mainStr, newS2);
 
 	mainStr[(length + 1)] = '\0';
+	free(newS2);
 
 	return (mainStr);
 }
