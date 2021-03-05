@@ -45,8 +45,7 @@ void _str_concat(char *s1, char *s2)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *mainStr;
-	unsigned int lens2;
-	int length, l, i;
+	unsigned int lens2, length, l, i;
 	char *newS2;
 
 	if (s1 == 0)
