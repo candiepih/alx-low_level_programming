@@ -45,7 +45,8 @@ void _str_concat(char *s1, char *s2)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *mainStr;
-	int length, l, lens2, i;
+	unsigned int lens2;
+	int length, l, i;
 	char *newS2;
 
 	if (s1 == 0)
@@ -56,8 +57,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	l = _str_length(s1);
 	lens2 = _str_length(s2);
 
-	if ((int)n < lens2)
-		lens2 = (int)n;
+	if (n < lens2)
+		lens2 = n;
 
 	length = l + lens2;
 	mainStr = malloc(sizeof(*mainStr) * (length + 1));
