@@ -61,7 +61,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	fullLength = len1 + len2;
 
-	newString = malloc(sizeof(*newString) * (fullLength - 2));
+	newString = malloc(sizeof(*newString) * (fullLength + 1));
+	if(!newString)
+		return (0);
+
 	for (i = 0; i < len1; i++)
 		newString[i] = s1[i];
 
