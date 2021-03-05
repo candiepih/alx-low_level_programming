@@ -71,6 +71,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newS2[i] = s2[i];
 		i++;
 	}
+	newS2[i] = '\0';
 
 	_str_concat(mainStr, s1);
 	_str_concat(mainStr, newS2);
