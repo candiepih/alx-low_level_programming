@@ -14,3 +14,5 @@ Function that frees a 2 dimensional grid previously created by above alloc_grid 
 Function that concatenates all the arguments of your program.
 ## 100-strtow.c
 Function that splits a string into words
+## holberton.h
+Contains all function prototypes and declarations used for this project
