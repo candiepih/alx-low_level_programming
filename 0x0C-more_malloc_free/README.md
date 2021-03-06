@@ -12,5 +12,7 @@ Function that creates an array of integers depending on range of numbers provide
 Function that reallocates a memory block using malloc and free. Works like library realloc function
 ## 101-mul.c
 Program that multiplies two positive numbers.
+## 101-mul_funcs.c
+Contains some function definations used in 100-mul.c task file.
 ## holberton.h
 Contains all function prototypes and declarations used for this project
