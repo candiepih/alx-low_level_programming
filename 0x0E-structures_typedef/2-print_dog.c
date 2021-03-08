@@ -20,8 +20,4 @@ void print_dog(struct dog *d)
 
 		printf("Owner: %s\n", IS_NULL(d->owner));
 	}
-	else
-	{
-		printf("");
-	}
 }
