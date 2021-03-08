@@ -17,7 +17,7 @@ struct dog
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
-#define IS_NULL(x) (x == NULL ? "(nil)" : x)
+#define IS_NULL(x) ((x == NULL) ? ("(nil)") : (x))
 
 void print_dog(struct dog *d);
 typedef struct dog dog_t;
