@@ -1,4 +1,5 @@
 # C - Preprocessor
+Topic was necessary to learn how compilation works, about macros and how to use them, about guards in header files and their usage, pre defined macros and preprocessor directives. The following task files helped in understanding the topic.
 ## 0-object_like_macro.h
 Creating header file that defines a macro named SIZE as an abbreviation for the token 1024.
 ## 1-pi.h
