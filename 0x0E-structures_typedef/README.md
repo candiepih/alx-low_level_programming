@@ -1,4 +1,5 @@
 # C - Structures, typedef
+Topic's aim was to understand what structures are and usage of typedef. I used the task files below to understand the topic.
 ## dog.h
 Defines a new type struct dog with the following elements:
 * name, type = char *, 
