@@ -1,5 +1,5 @@
 /**
- * cp_add - adds two numbers
+ * op_add - adds two numbers
  * @a: first numner
  * @b: second number
  * Return: sumation of the numbers

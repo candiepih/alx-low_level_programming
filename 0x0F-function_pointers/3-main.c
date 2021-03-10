@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	if (myOp.f == NULL)
 	{
 		printf("Error\n");
-		exit(99);	
+		exit(99);
 	}
 
 	result = myOp.f(atoi(argv[1]), atoi(argv[3]));
