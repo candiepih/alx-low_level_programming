@@ -1,3 +1,9 @@
+/**
+ * print_all - prints arguments provided depending on format
+ * @format: constant pointer to a string
+ * Return: nothing
+ */
+
 void print_all(const char * const format, ...)
 {
   int i = 0;
