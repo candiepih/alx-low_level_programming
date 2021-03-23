@@ -41,7 +41,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		i++;
 	}
 
-	if (((int)idx > i) || (idx < 0))
+	if (((int)idx > i) || ((int)idx < 0))
 		return (NULL);
 
 	return (new_node);
