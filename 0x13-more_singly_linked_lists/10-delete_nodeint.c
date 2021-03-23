@@ -23,12 +23,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			node_tmp = (*head)->next;
 			free(*head);
 			*head = node_tmp;
+			return (1;
 		}
 		else if (i == ((int)index - 1))
 		{
 			node_tmp = tmp->next;
 			tmp->next = node_tmp->next;
 			free(node_tmp);
+			return (1);
 		}
 		tmp = tmp->next;
 		i++;
