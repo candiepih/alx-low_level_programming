@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * clear_bit - unsets a bit at a particular index
  * @n: pointer to the number to clear the bit
@@ -11,12 +9,9 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	int is_set;
 
-	if (*n == NULL)
-		return (-1);
-
-	is_set = *n & (1 << index);
+	is_set = (*n & (1 << index));
 	if (is_set)
-		*n = *n & ~(1 << index);
+		*n = (*n & (~(1 << index)));
 	else
 		return (-1);
 
