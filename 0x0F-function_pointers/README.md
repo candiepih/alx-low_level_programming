@@ -62,5 +62,16 @@ op_t ops[] = {
         {NULL, NULL}
     };
     int i;
- 
+
  ```
+## 3-main.c
+This file should contain your main
+
+* Not allowed to code any other function than main in this file
+* Not allowed to directly call op_add, op_sub, op_mul, op_div or op_mod from the main function
+* Use atoi to convert arguments to int
+* Not allowed to use any kind of loop
+* Allowed to use a maximum of 3 if statements
+
+## function_pointers.h
+contains function prototypes and declarations
