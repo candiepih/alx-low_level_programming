@@ -39,3 +39,28 @@ Contains the following functions.
 ## 3-get_op_func.c
 Contain the function that selects the correct function to perform the operation asked by the user.
 
+* Prototype: `int (*get_op_func(char *s))(int, int)`;
+* where `s` is the operator passed as argument to the program
+* This function returns a pointer to the function that corresponds to the operator given as a parameter. Example: `get_op_func("+")` should return a pointer to the function `op_add`
+* Not allowed to use switch statements
+* Not allowed to use for or do ... while loops
+* Not allowed to use goto
+* Not allowed to use else
+* Not allowed to use more than one if statement in your code
+* Not allowed to use more than one while loop in your code
+* If `s` does not match any of the 5 expected operators `(+, -, *, /, %)`, return `NULL`
+* Only allowed to declare these two variables in this function:
+
+```c
+
+op_t ops[] = {
+        {"+", op_add},
+        {"-", op_sub},
+        {"*", op_mul},
+        {"/", op_div},
+        {"%", op_mod},
+        {NULL, NULL}
+    };
+    int i;
+ 
+ ```
