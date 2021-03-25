@@ -14,3 +14,18 @@ function that searches for an integer.
 * If `size <= 0`, return -1
 ## 3-calc.h
 This file should contain all the function prototypes and data structures used by the program, using this structure:
+```c
+
+/**
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
+ */
+typedef struct op
+{
+    char *op;
+    int (*f)(int a, int b);
+} op_t;
+
+```
