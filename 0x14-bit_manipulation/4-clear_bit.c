@@ -7,11 +7,8 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int is_set;
-
-	is_set = (*n & (1 << index));
-	if (is_set)
-		*n = (*n & (~(1 << index)));
+	if (*n & (1 << index))
+		*n = *n & ~(1 << index);
 	else
 		return (-1);
 
