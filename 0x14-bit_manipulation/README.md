@@ -25,6 +25,11 @@ Function that returns the number of bits you would need to flip to get from one 
 * Prototype: `unsigned int flip_bits(unsigned long int n, unsigned long int m)`;
 * Not allowed to use the `%` or `/` operators
 
+## 100-get_endianness.c
+Function that checks the endianness.
+* Returns: `0` if big endian, `1` if little endian
+
+
 ## holberton.h
 Contains all the function declarations and prototypes
 ## _putchar.c
