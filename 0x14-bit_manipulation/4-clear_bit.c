@@ -9,7 +9,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	int is_set;
 
-	if ((index > (8 * 32) || !n)
+	if ((index > (8 * 32)) || !n)
 		return (-1);
 
 	is_set = (*n & (1 << index));
