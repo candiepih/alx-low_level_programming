@@ -83,7 +83,8 @@ void handle_cp_command(int *fd, char *file2)
 
 /**
  * main - Entry point.
- * Description: handles arguments and makes necessary calls for file copying handling
+ * Description: handles arguments and makes necessary calls for
+ * file copying handling
  * Return: Always 0.
  */
 int main(int argc, char **argv)
