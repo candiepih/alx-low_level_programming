@@ -83,6 +83,8 @@ void handle_cp_command(int *fd, char *file2)
 
 /**
  * main - Entry point.
+ * @argc: arguments count
+ * @argv: arguments vector, an array of string arguments supplied
  * Description: handles arguments and makes necessary calls for
  * file copying handling
  * Return: Always 0.
