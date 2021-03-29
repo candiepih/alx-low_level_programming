@@ -10,7 +10,7 @@
 
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	return (write(2, &c, 1));
 }
 
 /**
@@ -24,7 +24,7 @@ void write_buffer(char *s)
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
-		write(STDERR_FILENO, (s + i), 1);
+		write(2, (s + i), 1);
 }
 
 /**
