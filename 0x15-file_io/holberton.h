@@ -13,6 +13,6 @@ int append_text_to_file(const char *filename, char *text_content);
 void write_buffer(char *s);
 void handle_buffer_cp(int *fd1, int *fd2);
 void handle_cp_command(int *fd, char *file2);
-_putchar(char c);
+int _putchar(char c);
 
 #endif
