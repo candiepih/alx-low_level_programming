@@ -1,5 +1,17 @@
 #include "holberton.h"
 
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
 void write_buffer(char *s)
 {
 	int i;
@@ -22,20 +34,20 @@ void handle_buffer_cp(int *fd1, int *fd2)
 		{
 			write_buffer("Error: Can't write to ");
 			write_buffer("file2");
-			putchar('\n');
+			_putchar('\n');
 			exit(99);
 		}
 		if (!close(*fd1))
 		{
 			write_buffer("Error: Can't close fd ");
 			write_buffer((char *)fd1);
-			putchar('\n');
+			_putchar('\n');
 		}
 		if (!close(*fd2))
 		{
 			write_buffer("Error: Can't close fd ");
 			write_buffer((char *)fd2);
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
@@ -53,7 +65,7 @@ void handle_cp_command(int *fd, char *file2)
 	{
 		write_buffer("Error: Can't write to ");
 		write_buffer(file2);
-		putchar('\n');
+		_putchar('\n');
 		exit(99);
 	}
 
@@ -81,7 +93,7 @@ int main(int argc, char **argv)
 	{
 		write_buffer("Error: Can't read from file ");
 		write_buffer(argv[1]);
-		putchar('\n');
+		_putchar('\n');
 		exit(98);
 	}
 
