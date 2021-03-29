@@ -23,6 +23,7 @@ int _strlen(char *s)
  * @text_content: pointer to a string to append or write to the file
  * Descritpion: creates a new file and writes to it the contents of
  * @text_content null terminated string if it is not Null
+ * Return: (1) success (-1) on failure
  */
 
 int create_file(const char *filename, char *text_content)
