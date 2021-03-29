@@ -7,10 +7,17 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+/**
+ * write_buffer - writes a string to the std error
+ * @s: string to be printed
+ * Return: nothing
+ */
 
 void write_buffer(char *s)
 {
@@ -19,6 +26,13 @@ void write_buffer(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 		write(STDERR_FILENO, (s + i), 1);
 }
+
+/**
+ * handle_buffer_cp - copies buffer from one file to another file
+ * @fd1: file descriptor for file 1
+ * @fd2: file descriptor for file 2
+ * Return: nothing
+ */
 
 void handle_buffer_cp(int *fd1, int *fd2)
 {
@@ -39,6 +53,13 @@ void handle_buffer_cp(int *fd1, int *fd2)
 		}
 	}
 }
+
+/**
+ * handle_cp_command - handles buffer copying to other file
+ * @fd: pointer to file descriptor for file 1
+ * @file2: second file
+ * Return: nothing
+ */
 
 void handle_cp_command(int *fd, char *file2)
 {
@@ -61,8 +82,8 @@ void handle_cp_command(int *fd, char *file2)
 }
 
 /**
- * main - check the code for Holberton School students.
- *
+ * main - Entry point.
+ * Description: handles arguments and makes necessary calls for file copying handling
  * Return: Always 0.
  */
 int main(int argc, char **argv)
