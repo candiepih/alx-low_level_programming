@@ -34,16 +34,16 @@ void write_buffer(char *s)
  * Return: nothing
  */
 
-void handle_buffer_cp(int *fd1, int *fd2)
+void handle_buffer_cp(int fd1, int fd2)
 {
 	char buffer[1024];
 	int read_buffer_count;
 	int write_buffer_count;
 
-	read_buffer_count = read(*fd1, buffer, 1024);
+	read_buffer_count = read(fd1, buffer, 1024);
 	if (read_buffer_count)
 	{
-		write_buffer_count = dprintf(*fd2, "%s", buffer);
+		write_buffer_count = dprintf(fd2, "%s", buffer);
 		if (write_buffer_count < 0)
 		{
 			write_buffer("Error: Can't write to ");
@@ -61,7 +61,7 @@ void handle_buffer_cp(int *fd1, int *fd2)
  * Return: nothing
  */
 
-void handle_cp_command(int *fd, char *file2)
+void handle_cp_command(int fd, char *file2)
 {
 	int file2_fd;
 
@@ -78,7 +78,7 @@ void handle_cp_command(int *fd, char *file2)
 		exit(99);
 	}
 
-	handle_buffer_cp(fd, &file2_fd);
+	handle_buffer_cp(fd, file2_fd);
 }
 
 /**
@@ -109,7 +109,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	handle_cp_command(&fd, argv[2]);
+	handle_cp_command(fd, argv[2]);
 
 	return (0);
 }
