@@ -37,18 +37,6 @@ void handle_buffer_cp(int *fd1, int *fd2)
 			_putchar('\n');
 			exit(99);
 		}
-		if (!close(*fd1))
-		{
-			write_buffer("Error: Can't close fd ");
-			write_buffer((char *)fd1);
-			_putchar('\n');
-		}
-		if (!close(*fd2))
-		{
-			write_buffer("Error: Can't close fd ");
-			write_buffer((char *)fd2);
-			_putchar('\n');
-		}
 	}
 }
 
