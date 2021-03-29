@@ -1,5 +1,5 @@
 /**
- * _strcat - contactinates strings
+ * _strcat - concatenates strings
  * @dest: main string
  * @src: string to concatenate
  * Return: @dest(destination main string)
