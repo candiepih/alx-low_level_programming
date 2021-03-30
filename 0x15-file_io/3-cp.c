@@ -12,7 +12,10 @@ void handle_cp_command(int fd, char *file2)
 	int file2_fd, read_buffer_count, write_buffer_count;
 	char buffer[1024];
 
-	file2_fd = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	file2_fd = open(file2, O_WRONLY | O_CREAT | O_EXCL, 0664);
+
+	if (file2_fd < 0)
+		file2_fd = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (file2_fd < 0)
 	{
