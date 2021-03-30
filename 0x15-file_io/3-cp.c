@@ -5,7 +5,7 @@
  * @fd: pointer to file descriptor for file 1
  * @buffer: a string from file 1
  * @file2: second file
- * count: number of characters of @buffer
+ * @count: number of characters of @buffer
  * Return: nothing
  */
 
