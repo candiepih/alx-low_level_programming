@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd, fd2, read_buffer_count;
+	int fd, fd2, read_buffer_count, write_buffer_count;
 	char buffer[1024];
 
 	if (argc !=  3)
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 
 	while ((read_buffer_count = read(fd, buffer, 1024)) > 0)
 	{
-		if ((write(fd2, buffer, read_buffer_count)) != read_buffer_count)
+		if ((write_buffer_count = write(fd2, buffer, read_buffer_count)) != read_buffer_count)
 		{
 			dprintf(STDERR_FILENO, "ErrRRor: Can't write to %s\n", argv[2]);
 			exit(99);
@@ -47,6 +47,11 @@ int main(int argc, char **argv)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
+	}
+	if (write_buffer_count < 0)
+	{
+		dprintf(STDERR_FILENO, "ErrRRor: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 
 	if (close(fd))
