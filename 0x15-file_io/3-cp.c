@@ -9,36 +9,23 @@
  * Return: nothing
  */
 
-void handle_cp_command(int fd, char *buffer, char *file2, ssize_t count)
+void handle_cp_command(int fd, int fd2, char *buffer, char *file2, ssize_t count)
 {
-	int file2_fd, write_buffer_count;
+	int write_buffer_count;
 
-	file2_fd = open(file2, O_WRONLY | O_CREAT | O_EXCL, 0664);
-
-	if (file2_fd < 0)
-		file2_fd = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-	if (file2_fd < 0)
+	if (fd2 < 0)
+		fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fd2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 		exit(99);
 	}
 
-	write_buffer_count = write(file2_fd, buffer, count);
+	write_buffer_count = write(fd2, buffer, count);
 	if (write_buffer_count < 0)
 	{
 		dprintf(STDERR_FILENO, "ErrRRor: Can't write to %s\n", file2);
 		exit(99);
-	}
-	if (close(fd))
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd);
-		exit(100);
-	}
-	if (close(file2_fd))
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", file2_fd);
-		exit(100);
 	}
 }
 
@@ -53,7 +40,7 @@ void handle_cp_command(int fd, char *buffer, char *file2, ssize_t count)
 
 int main(int argc, char **argv)
 {
-	int fd, read_buffer_count;
+	int fd, fd2, read_buffer_count;
 	char buffer[1024];
 
 	if (argc !=  3)
@@ -70,7 +57,19 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	handle_cp_command(fd, buffer, argv[2], read_buffer_count);
+	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_EXCL, 0664);
+	handle_cp_command(fd, fd2, buffer, argv[2], read_buffer_count);
+
+	if (close(fd))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd);
+		exit(100);
+	}
+	if (close(fd2))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd2);
+		exit(100);
+	}
 
 	return (0);
 }
