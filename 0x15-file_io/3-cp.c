@@ -18,6 +18,7 @@ void handle_cp_command(int fd2, char *buffer, char *file2, ssize_t count)
 	if (fd2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
+		close(fd2);
 		exit(99);
 	}
 
@@ -25,7 +26,13 @@ void handle_cp_command(int fd2, char *buffer, char *file2, ssize_t count)
 	if (write_buffer_count < 0)
 	{
 		dprintf(STDERR_FILENO, "ErrRRor: Can't write to %s\n", file2);
+		close(fd2);
 		exit(99);
+	}
+	if (close(fd2))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd2);
+		exit(100);
 	}
 }
 
@@ -54,6 +61,7 @@ int main(int argc, char **argv)
 	if (fd < 0 || read_buffer_count < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		close(fd);
 		exit(98);
 	}
 
@@ -63,11 +71,6 @@ int main(int argc, char **argv)
 	if (close(fd))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd);
-		exit(100);
-	}
-	if (close(fd2))
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd2);
 		exit(100);
 	}
 
