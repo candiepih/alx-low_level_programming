@@ -2,7 +2,6 @@
 
 /**
  * handle_cp_command - handles buffer copying to other file
- * @fd: file descriptor for file 1
  * @fd2: file descriptor for file 2
  * @buffer: a string from file 1
  * @file2: second file
@@ -10,8 +9,7 @@
  * Return: nothing
  */
 
-void handle_cp_command(int fd, int fd2, char *buffer, char *file2,
-		       ssize_t count)
+void handle_cp_command(int fd2, char *buffer, char *file2, ssize_t count)
 {
 	int write_buffer_count;
 
@@ -60,7 +58,7 @@ int main(int argc, char **argv)
 	}
 
 	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_EXCL, 0664);
-	handle_cp_command(fd, fd2, buffer, argv[2], read_buffer_count);
+	handle_cp_command(fd2, buffer, argv[2], read_buffer_count);
 
 	if (close(fd))
 	{
