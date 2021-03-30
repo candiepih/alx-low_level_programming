@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd, fd2, read_buffer_count, write_buffer_count;
+	int fd, fd2, read_buffer_count;
 	char buffer[1024];
 
 	if (argc !=  3)
