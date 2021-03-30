@@ -33,6 +33,11 @@ void handle_cp_command(int fd, char *file2)
 			exit(99);
 		}
 	}
+	else
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	if (close(fd))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd);
