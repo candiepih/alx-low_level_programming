@@ -1,47 +1,6 @@
 #include "holberton.h"
 
 /**
- * write_buffer - writes a string to the std error
- * @s: string to be printed
- * Return: nothing
- */
-
-void write_buffer(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		write(2, (s + i), 1);
-}
-
-/**
- * handle_buffer_cp - copies buffer from one file to another file
- * @fd1: file descriptor for file 1
- * @fd2: file descriptor for file 2
- * Return: nothing
- */
-
-void handle_buffer_cp(int fd1, int fd2)
-{
-	char buffer[1024];
-	int read_buffer_count;
-	int write_buffer_count;
-
-	read_buffer_count = read(fd1, buffer, 1024);
-	if (read_buffer_count)
-	{
-		write_buffer_count = dprintf(fd2, "%s", buffer);
-		if (write_buffer_count < 0)
-		{
-			write_buffer("Error: Can't write to ");
-			write_buffer("file2");
-			_putchar('\n');
-			exit(99);
-		}
-	}
-}
-
-/**
  * handle_cp_command - handles buffer copying to other file
  * @fd: pointer to file descriptor for file 1
  * @file2: second file
@@ -50,22 +9,37 @@ void handle_buffer_cp(int fd1, int fd2)
 
 void handle_cp_command(int fd, char *file2)
 {
-	int file2_fd;
+	int file2_fd, read_buffer_count, write_buffer_count;
+	char buffer[1024];
 
-	file2_fd = open(file2, O_WRONLY | O_CREAT | O_EXCL, 0664);
-
-	if (file2_fd < 0)
-		file2_fd = open(file2, O_WRONLY | O_CREAT | O_TRUNC);
+	file2_fd = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (file2_fd < 0)
 	{
-		write_buffer("Error: Can't write to ");
-		write_buffer(file2);
-		_putchar('\n');
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 		exit(99);
 	}
 
-	handle_buffer_cp(fd, file2_fd);
+	read_buffer_count = read(fd, buffer, 1024);
+	if (read_buffer_count)
+	{
+		write_buffer_count = write(file2_fd, buffer, read_buffer_count);
+		if (write_buffer_count < 0)
+		{
+			dprintf(STDERR_FILENO, "ErrRRor: Can't write to %s\n", file2);
+			exit(99);
+		}
+	}
+	if (close(fd))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd);
+		exit(100);
+	}
+	if (close(file2_fd))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", file2_fd);
+		exit(100);
+	}
 }
 
 /**
@@ -82,7 +56,7 @@ int main(int argc, char **argv)
 
 	if (argc !=  3)
 	{
-		write_buffer("Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -90,9 +64,7 @@ int main(int argc, char **argv)
 
 	if (fd < 0)
 	{
-		write_buffer("Error: Can't read from file ");
-		write_buffer(argv[1]);
-		_putchar('\n');
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
