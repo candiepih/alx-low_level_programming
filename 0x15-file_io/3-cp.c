@@ -11,7 +11,7 @@
 
 void handle_cp_command(int fd, char *buffer, char *file2, ssize_t count)
 {
-	int file2_fd, read_buffer_count, write_buffer_count;
+	int file2_fd, write_buffer_count;
 	
 	file2_fd = open(file2, O_WRONLY | O_CREAT | O_EXCL, 0664);
 
