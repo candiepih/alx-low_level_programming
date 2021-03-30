@@ -2,14 +2,16 @@
 
 /**
  * handle_cp_command - handles buffer copying to other file
- * @fd: pointer to file descriptor for file 1
+ * @fd: file descriptor for file 1
+ * @fd2: file descriptor for file 2
  * @buffer: a string from file 1
  * @file2: second file
  * @count: number of characters of @buffer
  * Return: nothing
  */
 
-void handle_cp_command(int fd, int fd2, char *buffer, char *file2, ssize_t count)
+void handle_cp_command(int fd, int fd2, char *buffer, char *file2,
+		       ssize_t count)
 {
 	int write_buffer_count;
 
