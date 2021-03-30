@@ -12,7 +12,7 @@
 void handle_cp_command(int fd, char *buffer, char *file2, ssize_t count)
 {
 	int file2_fd, write_buffer_count;
-	
+
 	file2_fd = open(file2, O_WRONLY | O_CREAT | O_EXCL, 0664);
 
 	if (file2_fd < 0)
@@ -69,7 +69,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-  
+
 	handle_cp_command(fd, buffer, argv[2], read_buffer_count);
 
 	return (0);
