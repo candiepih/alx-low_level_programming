@@ -19,7 +19,7 @@ void buffer_handling(int fd, int fd2, char *buffer, char *f1, char *f2)
 		write_buffer_count = write(fd2, buffer, read_buffer_count);
 		if ((write_buffer_count != read_buffer_count) || (write_buffer_count < 0))
 		{
-			dprintf(STDERR_FILENO, "ErrRRor: Can't write to %s\n", f2);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f2);
 			exit(99);
 		}
 	}
