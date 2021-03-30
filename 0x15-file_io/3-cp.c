@@ -7,7 +7,7 @@
  * Return: nothing
  */
 
-void handle_cp_command(int fd, char *file2)
+void handle_cp_command(int fd, char *file1, char *file2)
 {
 	int file2_fd, read_buffer_count, write_buffer_count;
 	char buffer[1024];
@@ -35,7 +35,7 @@ void handle_cp_command(int fd, char *file2)
 	}
 	else
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
 	if (close(fd))
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	handle_cp_command(fd, argv[2]);
+	handle_cp_command(fd, argv[1], argv[2]);
 
 	return (0);
 }
