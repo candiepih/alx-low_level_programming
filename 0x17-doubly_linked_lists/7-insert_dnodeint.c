@@ -4,7 +4,7 @@
  * insert_dnodeint_at_index - inserts a new node at a certain index
  * @h: beginning of dlistint_t linked list
  * @idx: the position to insert the new node
- * data (n) of dlistint_t node
+ * @n: data (n) of dlistint_t node
  *
  * Return: (new_node) on success or (NULL) on failure
  * to add the new node at index idx
