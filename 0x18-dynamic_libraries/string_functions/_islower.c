@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _islower - determine lowercase letters
  * @c: character to determine lowercase

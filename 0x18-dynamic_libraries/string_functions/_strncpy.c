@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _strncpy - copies @src string to @dest including the terminating
  * null byte ensuring that most @n bytes of src are copied to @dest.

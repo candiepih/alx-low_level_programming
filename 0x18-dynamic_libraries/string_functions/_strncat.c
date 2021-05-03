@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _strncat - concatenates strings but printing most of @n
  * bytes from @src buto src does not need to be null terminated

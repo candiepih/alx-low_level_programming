@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _abs - determine absolute value of @num
  * @num: value to determine

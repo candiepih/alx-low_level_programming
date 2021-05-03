@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _strcat - contactinates strings
  * @dest: main string

@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _isalpha - checking for alphabet characters
  * @c: character to be determined for alphabet

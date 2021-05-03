@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "../holberton.h"
 
 /**
  * _puts - prints string to stdout

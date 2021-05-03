@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _memset - fills  n bytes of memory of constant b area pointed to by @s
  * @s: pointer to the destination string
