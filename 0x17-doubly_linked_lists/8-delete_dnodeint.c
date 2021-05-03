@@ -10,6 +10,7 @@
 int remove_node_start(dlistint_t **head, dlistint_t *current_node)
 {
 	dlistint_t *tmp;
+
 	if (!current_node->next)
 	{
 		free(current_node);
