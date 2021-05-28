@@ -25,7 +25,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 	for (i = 0; i < size; i++)
 		hash_table->array[i] = NULL;
-	
+
 	hash_table->shead = NULL;
 	hash_table->stail = NULL;
 	return (hash_table);
@@ -39,7 +39,8 @@ shash_table_t *shash_table_create(unsigned long int size)
  * @value: value of the new node
  * Return: new created node on success and NULL on failure
  */
-shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index, const char *key, const char *value)
+shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index,
+const char *key, const char *value)
 {
 	shash_node_t *new_node = NULL;
 
@@ -64,8 +65,7 @@ shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index, const 
  */
 void sort_shash_node_t(shash_table_t **ht, shash_node_t **new_node)
 {
-	shash_node_t *head = (*ht)->shead;
-	shash_node_t *node = *new_node, *prev, *next;
+	shash_node_t *head = (*ht)->shead, *node = *new_node, *prev, *next;
 
 	if (head == NULL)
 	{
