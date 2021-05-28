@@ -9,7 +9,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	int i;
 	hash_node_t *item;
-	int first_flag = 0, second_flag = 0;
+	int first_flag = 0;
 
 	if (ht == NULL)
 		return;
@@ -22,23 +22,12 @@ void hash_table_print(const hash_table_t *ht)
 			continue;
 		if (first_flag <= 1)
 			first_flag++;
-		if (first_flag == 2)
-			printf(", ");
-		if (item->next == NULL)
+		while (item)
 		{
+			if (first_flag == 2)
+				printf(", ");
 			printf("'%s': '%s'", item->key, item->value);
-		}
-		else
-		{
-			while (item)
-			{
-				if (second_flag <= 1)
-					second_flag++;
-				if (second_flag == 2)
-					printf(", ");
-				printf("'%s': '%s'", item->key, item->value);
-				item = item->next;
-			}
+			item = item->next;
 		}
 	}
 	printf("}\n");
