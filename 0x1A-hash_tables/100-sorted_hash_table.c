@@ -1,5 +1,11 @@
 #include "hash_tables.h"
 
+/**
+ * shash_table_create - creates a hash table
+ * @size: the size of the array to create
+ * Return: pointer to the newly created hash table or NULL on
+ * failure
+ */
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *hash_table;
@@ -25,7 +31,16 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (hash_table);
 }
 
-shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index, const char *key, const char *value)
+/**
+ * create_new_node - helper function to create a new node
+ * @ht: hash table of shash_table_t
+ * @index: the index position to insert the new node
+ * @key: the key of the new node
+ * @value: value of the new node
+ * Return: new created node on success and NULL on failure
+ */
+shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index,
+			      const char *key, const char *value)
 {
 	shash_node_t *new_node = NULL;
 
