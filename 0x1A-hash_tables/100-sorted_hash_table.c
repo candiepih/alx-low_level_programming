@@ -39,8 +39,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  * @value: value of the new node
  * Return: new created node on success and NULL on failure
  */
-shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index,
-			      const char *key, const char *value)
+shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index, const char *key, const char *value)
 {
 	shash_node_t *new_node = NULL;
 
@@ -56,6 +55,13 @@ shash_node_t *create_new_node(shash_table_t *ht, unsigned long int index,
 	return (new_node);
 }
 
+/**
+ * sort_shash_node_t - adds and sorts new node to the shash_node_t doubly
+ * linked list
+ * @ht: hash table of shash_table_t
+ * @new_node: pointer to the new created node
+ * Return: nothing
+ */
 void sort_shash_node_t(shash_table_t **ht, shash_node_t **new_node)
 {
 	shash_node_t *head = (*ht)->shead;
@@ -83,7 +89,7 @@ void sort_shash_node_t(shash_table_t **ht, shash_node_t **new_node)
 		}
 		else if (node->key[0] > head->key[0])
 		{
-			if (!head->snext || (head->snext &&  head->snext->key[0] > node->key[0]))
+			if (!head->snext || (head->snext && head->snext->key[0] > node->key[0]))
 			{
 				prev = head;
 				next = head->snext;
