@@ -107,6 +107,13 @@ void sort_shash_node_t(shash_table_t **ht, shash_node_t **new_node)
 	}
 }
 
+/**
+ * shash_table_set - adds an element to the hash table
+ * @ht: hash table data structure of shash_table_t
+ * @key: the key string
+ * @value: the value corresponding to the key
+ * Return: 1 if it succeeded, 0 on failure
+ */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	shash_node_t *new_node = NULL, *tmp = NULL;
@@ -139,6 +146,12 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
+/**
+ * shash_table_get - retrieves a value associated with a key
+ * @ht: the hash table data structure of shash_table_t
+ * @key: the key, string
+ * Return: the value of the associated key or NULL if not found
+ */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	unsigned long int index;
@@ -163,6 +176,11 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (NULL);
 }
 
+/**
+ * shash_table_print - prints the hash table
+ * @ht: the hash table of shash_table_print
+ * Return: nothing
+ */
 void shash_table_print(const shash_table_t *ht)
 {
 	int i;
@@ -186,6 +204,11 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 
+/**
+ * shash_table_print_rev - prints the hash table in reverse
+ * @ht: the hash table of shash_table_t
+ * Return: nothing
+ */
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	int i;
@@ -210,8 +233,8 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 /**
- * free_dlistint - frees a doubly linked list
- * @head: beginning of dlistint_t linked list
+ * free_shash_node_t_list - frees a doubly linked list
+ * @head: beginning of shash_node_t doubly linked list
  * Return: nothing
  */
 
@@ -230,6 +253,11 @@ void free_shash_node_t_list(shash_node_t *head)
 	}
 }
 
+/**
+ * shash_table_delete - deletes the hash table
+ * @ht: the hash table of shash_table_t
+ * Return: nothing
+ */
 void shash_table_delete(shash_table_t *ht)
 {
 	int i;
