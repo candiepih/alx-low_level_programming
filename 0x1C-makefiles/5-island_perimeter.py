@@ -10,10 +10,10 @@ def determine_soroundings(array, y, x):
     perimeter
     """
     mask = 1
-    top = array[y - 1][x] ^ mask
-    bottom = array[y + 1][x] ^ mask
-    left = array[y][x - 1] ^ mask
-    right = array[y][x + 1] ^ mask
+    top = array[y - 1][x] ^ mask if y > 0 else 1
+    bottom = array[y + 1][x] ^ mask if y < (len(array) - 1) else 1
+    left = array[y][x - 1] ^ mask if x > 0 else 1
+    right = array[y][x + 1] ^ mask if x < (len(array[y]) - 1) else 1
 
     perimeter = top + bottom + right + left
     return perimeter
