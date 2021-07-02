@@ -4,8 +4,10 @@ island described in grid
 """
 
 def determine_soroundings(array, y, x):
-    """Assuming that land is 0 and water is 1 using xor and
-    water as mask we get if side has water
+    """Determines whether soroundings has water or not
+    Assuming that land is 0 and water is 1 using xor and
+    land as mask we get value as either 1 or 0 to add to
+    perimeter
     """
     mask = 1
     top = array[y - 1][x] ^ mask
