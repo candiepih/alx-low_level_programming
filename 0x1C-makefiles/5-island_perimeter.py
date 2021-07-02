@@ -16,8 +16,8 @@ def determine_soroundings(array, y, x):
     bottom = array[y + 1][x] ^ mask if y < (len(array) - 1) else 1
     left = array[y][x - 1] ^ mask if x > 0 else 1
     right = array[y][x + 1] ^ mask if x < (len(array[y]) - 1) else 1
-    p = top + bottom + right + left
-    return p
+    positions = top + bottom + right + left
+    return positions
 
 def island_perimeter(grid):
     """Gets the perimeter determined by sorounding.
