@@ -25,6 +25,8 @@ def island_perimeter(grid):
     Args:
         grid (list): list of lists
     """
+    if not isinstance(grid, list):
+        return
     land = 1
     perimeter = 0
     for i in range(len(grid)):
