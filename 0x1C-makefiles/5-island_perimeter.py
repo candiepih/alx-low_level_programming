@@ -30,6 +30,5 @@ def island_perimeter(grid):
     for i in range(len(grid)):
         for j, x in enumerate(grid[i]):
             if x == land:
-                p = determine_soroundings(grid, i, j)
-                perimeter += p
+                perimeter += determine_soroundings(grid, i, j)
     return perimeter
