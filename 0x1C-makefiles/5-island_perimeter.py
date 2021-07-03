@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Contains function that returns the perimeter of the 
+"""Contains function that returns the perimeter of the
 island described in grid
 """
+
 
 def determine_soroundings(array, y, x):
     """Determines whether soroundings has water or not
@@ -18,6 +19,7 @@ def determine_soroundings(array, y, x):
     right = array[y][x + 1] ^ mask if x < (len(array[y]) - 1) else 1
     positions = top + bottom + right + left
     return positions
+
 
 def island_perimeter(grid):
     """Gets the perimeter determined by sorounding.
