@@ -107,3 +107,5 @@ grid = [
     ]
 
 ```
+
+Perimeter of ground covered by land is got by visiting every cell in the grid and determining soroundings ie. on it's top, bottom, left, right to check if theres water or land on the sides. Each side that has water on sides gets 1 unit addition to it's parameter. We keep on adding the sides that have water as neighbours and also taking into consideration first indexes and last grid indexes until the end of whole grid
