@@ -5,3 +5,7 @@ Topics aim was to understand what makefiles are, how, why and when they should b
 * What are explicit and implicit rules
 * What are the most common / useful rules
 * What are variables and how to set and use them
+
+Following task files helped in testing my understanding on the concept
+
+[0-Makefile](./blob/main/0x1C-makefiles/0-Makefile)
