@@ -8,4 +8,4 @@ Topics aim was to understand what makefiles are, how, why and when they should b
 
 Following task files helped in testing my understanding on the concept
 
-[0-Makefile](./blob/main/0x1C-makefiles/0-Makefile)
+[0-Makefile](./0x1C-makefiles/0-Makefile)
