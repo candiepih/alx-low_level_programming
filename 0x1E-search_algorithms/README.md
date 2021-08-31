@@ -45,7 +45,7 @@ Contains `space complexity` (worst case) of a binary search in an array of size 
 
 Contains `space complexity` of this function / algorithm?
 
-```
+```.c
 
 int **allocate_map(int n, int m)
 {
