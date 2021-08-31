@@ -60,3 +60,7 @@ int **allocate_map(int n, int m)
 }
 
 ```
+
+[search_algos.h](./search_algos.h)
+
+Contains the prototypes of all functions used for this project.
