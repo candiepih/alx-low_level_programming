@@ -24,3 +24,39 @@ Function that searches for a value in a sorted array of integers using the Binar
 
 * Prototype : `int binary_search(int *array, size_t size, int value);`
 * Returns `-1` if value is not present in array or if array is `NULL` else index where value is located
+
+[2-O](./2-O)
+
+Contains `time complexity` (worst case) of a linear search in an array of size `n`?
+
+[3-O](./3-O)
+
+Contains `space complexity` (worst case) of an iterative linear search algorithm in an array of size n?
+
+[4-O](./4-O)
+
+Contains `time complexity` (worst case) of a binary search in an array of size `n`?
+
+[5-O](./5-O)
+
+Contains `space complexity` (worst case) of a binary search in an array of size `n`?
+
+[6-O](./6-O)
+
+Contains `space complexity` of this function / algorithm?
+
+```
+
+int **allocate_map(int n, int m)
+{
+     int **map;
+
+     map = malloc(sizeof(int *) * n);
+     for (size_t i = 0; i < n; i++)
+     {
+          map[i] = malloc(sizeof(int) * m);
+     }
+     return (map);
+}
+
+```
