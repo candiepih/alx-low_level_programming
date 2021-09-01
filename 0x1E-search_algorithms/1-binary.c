@@ -15,8 +15,9 @@ void print_array(int *array, int size)
 		printf("%d", array[i]);
 		if (i != (size - 1))
 			printf(", ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 }
 
 /**
@@ -47,5 +48,10 @@ int binary_search(int *array, size_t size, int value)
 	{
 		return (binary_search(array, center, value));
 	}
-	return (binary_search((array + (center + 1)), size - (center + 1), value));
+	else if (value > array[center])
+	{
+		return (binary_search((array + (center + 1)), size - (center + 1), value))
+	}
+
+	return (-1);
 }
