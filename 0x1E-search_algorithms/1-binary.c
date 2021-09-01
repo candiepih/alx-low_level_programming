@@ -3,17 +3,18 @@
 /**
  * print_array - prints the elements of the array
  * @array: the array to print it's contents
- * @size: the number of elements in the array
+ * @start: first index of the array
+ * @end: the last index of the array
  * Return: nothing
  */
-void print_array(int *array, int size)
+void print_array(int *array, int start, int end)
 {
 	int i;
 
-	for (i = 0; i < size; i++)
+	for (i = start; i <= end; i++)
 	{
 		printf("%d", array[i]);
-		if (i != (size - 1))
+		if (i != end)
 			printf(", ");
 		else
 			printf("\n");
@@ -32,7 +33,7 @@ void print_array(int *array, int size)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int left, right, center, i;
+	int left, right, center;
 
 	if (!array)
 		return (-1);
@@ -41,17 +42,11 @@ int binary_search(int *array, size_t size, int value)
 	right = (size - 1);
 	while (left <= right)
 	{
-		for (i = left; i <= right; i++)
-		{
-			printf("%d", array[i]);
-			if (i != (right))
-				printf(", ");
-			else
-				printf("\n");
-		}
+		printf("Searching in array: ");
+		print_array(array, left, right);
 		center = (left + right) / 2;
 		if (array[center] == value)
-			return center;
+			return (center);
 		else if (value < array[center])
 			right = center - 1;
 		else if (value > array[center])
