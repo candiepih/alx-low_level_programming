@@ -48,10 +48,5 @@ int binary_search(int *array, size_t size, int value)
 	{
 		return (binary_search(array, center, value));
 	}
-	else if (value > array[center])
-	{
-		return (binary_search((array + (center + 1)), size - (center + 1), value));
-	}
-
-	return (-1);
+	return (binary_search((array + (center + 1)), (size - (center + 1)), value));
 }
